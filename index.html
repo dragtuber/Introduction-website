@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Know Da Joss</title>
+<script src="https://kit.fontawesome.com/7f75505ba1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <div class="home">   
+    <nav>
+            <ul id="sidebar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Who am I?</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        <div class="container">
+            <div class="header-text">
+                <p class="text1" id="every">The <span>one</span> and <span>only</span></p>
+                <h1 id="every">Joss Adrian M. Alcantara</h1>
+            </div>
+        </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col1">
+                    <img src="pfp.png">
+                    </div>
+                    <div class="col2">
+                    <h1 class="titlew">About me</h1>
+                    <p class="desc">Hi! My name is Joss Adrian M. Alcantara I am currently 17 years old born on September 6, 2008.
+                        I study at Notre Dame of Greater Manila or NDGM for short. I enjoy a variety of things which are a bit obscure
+                        such as playing with the yo-yo, making music, drawing pixel art, and now coding. With music I play
+                        with the bass and guitar and have a music channel called Gears of Fate. I am a member of the NDGM volleyball varsity team for 3 years now
+                        played both middle blocker and outside hitter. I am also a member of the publication group winning multiple journalism
+                        awards but nothing too crazy.
+                    </p>
+                    <div class="tabTitles">
+                        <p class="tabLinks activeLink" onclick="opentab('Hobbies')">Interests</p>
+                        <p class="tabLinks" onclick="opentab('Songs')">Favorite Arists and Songs</p>
+                        <p class="tabLinks" onclick="opentab('Achievements')">Achievements</p>
+                    </div>
+                    <div class="tabContents activeTab" id="Hobbies">
+                      <ul>
+                        <li><span>Yoyoing</span><br>1a and 5a</li>
+                        <li><span>Playing and making music</span><br>Bass, Guitar, and production</li>
+                        <li><span>Rubik's Cube</span><br>3x3 speedsolver</li>
+                        <li><span>Volleyball</span><br>Outside and middle hitter</li>
+                        <li><span>Coding</span><br>Front end Web Dev</li>
+                        <li><span>Toy Collecter</span><br>TCG, Figurines, Beyblade</li>
+                      </ul>
+                    </div>
+                    <div class="tabContents" id="Songs">
+                      <ul>
+                        <li><span>Eraserheads</span><br>Ang huling el Bimbo</li>
+                        <li><span>IVOS</span><br>Mundo</li>
+                        <li><span>Lola Amour</span><br>Dahan-Dahan</li>
+                        <li><span>Musicals</span><br>Wait for It</li>
+                        <li><span>Queen</span><br>Bohemian Rhapsody</li>
+                      </ul>
+                    </div>
+                    <div class="tabContents" id="Achievements">
+                      <ul>
+                        <li><span>Academic Honors</span><br>With and with high honors</li>
+                        <li><span>Sports</span><br>top 3 in numerous leagues</li>
+                        <li><span>Performing Live</span><br>Front act in a concert</li>
+                        <li><span>Journalism</span><br>Winning multiple sports writing awards</li>
+                      </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hobbies">
+            <div class="container">
+                <h1 class="sub-title">My Hobbies</h1>
+                <div class="hobbies-list">
+                    <div>
+                    <h2 class="font">YoYo</h2>
+                    <img src="pic1.JPG" id="pic1">
+                </div>
+                <div>
+                    <h2>Music</h2>
+                    <img src="bass.png" id="pic1">
+                </div>
+                <div>
+                    <h2 class="font">Cubing</h2>
+                    <img src="cube.png" id="pic1">
+                </div>
+                <div>
+                    <h2 class="font">Volleyball</h2>
+                    <img src="vbal.png" id="pic1">
+                </div>
+                <div>
+                    <h2 class="font">Toy Collector</h2>
+                    <img src="toy.png" id="pic1">
+                </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="contact">
+            <div class="conta">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact me</h1>
+                        <p><i class="fa-solid fa-message"></i>jossmalcantara@gmail.com</p>
+                        <div class="icons">
+                            <a href="https://www.instagram.com/jossadrianalcantara/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/jossadrian.alcantara"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.youtube.com/@prodbyG.O.F"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Made by Joss Alcantara</p>
+            </div>
+        </div>
+<script>
+    var tablinks=document.getElementsByClassName("tabLinks");
+    var tabcontents=document.getElementsByClassName("tabContents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("activeLink");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("activeTab");
+        }
+        event.currentTarget.classList.add("activeLink");
+        document.getElementById(tabname).classList.add("activeTab");
+    }
+
+</script>
+,<script>
+    var sidemenu=document.getElementById("sidebar");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+     function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+    </body>
+</html>
